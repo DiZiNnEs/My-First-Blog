@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" text="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="left-nav">
+            <ul>
+                <li style="float:left"><a class="right-django-blog" href="#">Django Blog</a></li>
+                <li style="float: right;"><a href="##">About Blog</a></li>
+                <li style="float: right;"><a href="###">Who is DiZiNnEs</a></li>
+                <li style="float: right;"><a href="####">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+        <header>
+            <div class="big-blue-square">
+                <h2 class="welcome-myblog">Welcome to my Blog!</h2>
+                <h3 class="span2">I made the blog on django</h3>
+            </div>
+        </header>
+
+            <main>
+                <div>
+                    <h1>Blog</h1>
+                    {% for blog in blogs %}
+                        <a class="title-name" href="#">{{ blog.title }}</a>
+                        <p>Author: <span class="author-name">{{blog.author}}</span></p>
+                        <p>
+                            <img src="{% static "background/blog-background.jpg" %}" alt="Blog">
+                        </p>
+                        <p>Publication Date: {{ blog.pub_date }}</p> <br><br>
+                        <div class="read-continue">
+                            <a class="read-continue-a" href="">Read more >>></a>
+                        </div>
+                    {% endfor %}
+                    
+                    
+                </div>
+            </main>
+    
+</body>
+</html>

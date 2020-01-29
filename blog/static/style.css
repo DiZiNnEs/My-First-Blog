@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+nav {
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.left-nav {
+    width: 100%;
+    height: 100%;
+}
+.left-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.left-nav ul li {
+    display: inline;
+}
+
+.left-nav li a {
+    display: block;
+    color: #A4ABAF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.right-django-blog {
+    /*background-color: #4CAF50;*/
+}
+
+.left-nav li a:hover:not(.right-django-blog) {
+    background-color: #000000;
+}
+
+.big-blue-square {
+    height: 120px;
+    width: 100%;
+    background-color: #56C4F3;
+}
+
+.welcome-myblog {
+    padding: 10px 0px 0px 150px;
+    color: #ffffff;
+    
+}
+.span2 {
+    padding: 10px 0px 0px 150px;
+    color: #ffffff;
+}
+
+main {
+    margin: 0px 200px 0px 250px;
+}
+.title-name{
+    text-decoration-line: none;
+}
+
+.author-name{
+    color: blueviolet;
+}
+
+main h1 {
+    
+}
+
+.read-continue {
+    border: 2px solid #000000;
+    border-radius: 22px;
+    width: 140px;
+    height: 44px;
+}
+.read-continue-a {
+    text-decoration-line: none;
+    margin: 300px 2px;
+}
+
