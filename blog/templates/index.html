@@ -23,27 +23,31 @@
         <header>
             <div class="big-blue-square">
                 <h2 class="welcome-myblog">Welcome to my Blog!</h2>
-                <h3 class="span2">I made the blog on django</h3>
+                <h3 class="span2">I made a blog on Django</h3>
             </div>
         </header>
 
             <main>
                 <div>
                     <h1>Blog</h1>
-                    {% for blog in blogs %}
-                        <a class="title-name" href="#">{{ blog.title }}</a>
-                        <p>Author: <span class="author-name">{{blog.author}}</span></p>
-                        <p>
-                            <img src="{% static "background/blog-background.jpg" %}" alt="Blog">
-                        </p>
-                        <p>Publication Date: {{ blog.pub_date }}</p> <br><br>
-                        <div class="read-continue">
-                            <a class="read-continue-a" href="">Read more >>></a>
-                        </div>
-                    {% endfor %}
-                    
-                    
                 </div>
+
+                    <div>
+                        {% for blog in blogs %}
+                            <a class="title-name" href="#">{{ blog.title }}</a>
+                            <p>Author: <span class="author-name">{{blog.author}}</span></p>
+                            <p>
+                                <img src="{% static "background/blog-background.jpg" %}" alt="Blog">
+                            </p>
+                            <p>Publication Date: {{ blog.pub_date }}</p> 
+
+                            <!--<div class="read-continue">
+                                 <a class="read-continue-a" href="">Read</a>
+                            </div> -->
+
+                            <a class="read-more" href=""><button class="read-button">Read more</button></a><br>
+                        {% endfor %}
+                    </div>
             </main>
     
 </body>

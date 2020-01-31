@@ -65,18 +65,14 @@ main {
     color: blueviolet;
 }
 
-main h1 {
-    
-}
 
-.read-continue {
-    border: 2px solid #000000;
-    border-radius: 22px;
-    width: 140px;
-    height: 44px;
+.read-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
-.read-continue-a {
-    text-decoration-line: none;
-    margin: 300px 2px;
-}
-
