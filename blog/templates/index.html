@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" text="text/css" href="{% static 'style.css' %}">
 </head>
 <body>
+    <!-- QQ --> 
     <nav>
         <div class="left-nav">
             <ul>
@@ -36,17 +37,19 @@
                         {% for blog in blogs %}
                             <a class="title-name" href="#">{{ blog.title }}</a>
                             <p>Author: <span class="author-name">{{blog.author}}</span></p>
+                            <span>Publication Date: {{ blog.pub_date }}</span> 
                             <p>
                                 <img src="{% static "background/blog-background.jpg" %}" alt="Blog">
                             </p>
-                            <p>Publication Date: {{ blog.pub_date }}</p> 
+                            <!--<p>Publication Date: {{ blog.pub_date }}</p> ->>
 
                             <!--<div class="read-continue">
                                  <a class="read-continue-a" href="">Read</a>
                             </div> -->
 
-                            <a class="read-more" href=""><button class="read-button">Read more</button></a><br>
+                            <a class="read-more" href="{% url 'post_detail' blog.slug  %}"><button class="read-button">Read more ❯</button></a><br>
                         {% endfor %}
+                            
                     </div>
             </main>
     

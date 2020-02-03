@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" text="text/css" href="{% static 'post_detail.css' %}">
+</head>
+<body>
+    <!-- QQ --> 
+    <nav>
+        <div class="left-nav">
+            <ul>
+                <li style="float:left"><a class="right-django-blog" href="#">Django Blog</a></li>
+                <li style="float: right;"><a href="##">About Blog</a></li>
+                <li style="float: right;"><a href="###">Who is DiZiNnEs</a></li>
+                <li style="float: right;"><a href="####">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+        <header>
+            <div class="big-blue-square">
+                <h2 class="welcome-myblog">DiZiNnEs Blog</h2>
+                <h3 class="span2">Welcome to blog</h3>
+            </div>
+        </header>
+
+            <main>
+                <div>
+                    <h1>Title: {{ blog.title }}</h1>
+                </div>
+                    <div>
+                        <p> Content: {{blog.content}} </p>
+                    </div>
+            </main>
+    
+</body>
+</html>
